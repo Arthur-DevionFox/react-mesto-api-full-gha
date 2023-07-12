@@ -1,0 +1,10 @@
+.element {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 282px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+    position: relative;
+}

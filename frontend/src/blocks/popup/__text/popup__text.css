@@ -1,0 +1,12 @@
+.popup__text {
+    margin: 0;
+    padding: 34px 36px 38px 36px;
+    max-width: 358px;
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .popup__text {
+        text-align: center;
+    }
+}

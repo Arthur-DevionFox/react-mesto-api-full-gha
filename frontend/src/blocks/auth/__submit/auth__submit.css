@@ -1,0 +1,17 @@
+.auth__submit {
+    font-family: "Inter",Arial,sans-serif;
+	height: 49px;
+    margin-top: 190px;
+	font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.auth__submit:hover {
+    opacity: .85;
+}
