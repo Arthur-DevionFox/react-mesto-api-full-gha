@@ -38,8 +38,8 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
-app.post('/signup', validateUserCreate, createUser);
-app.post('/signin', validateUserAuth, userLogin);
+app.post('/sign-up', validateUserCreate, createUser);
+app.post('/sign-in', validateUserAuth, userLogin);
 
 app.use(auth);
 
