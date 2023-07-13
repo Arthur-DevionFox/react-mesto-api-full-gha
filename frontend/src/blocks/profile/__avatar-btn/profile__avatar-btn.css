@@ -1,0 +1,38 @@
+.profile__avatar-btn {
+    max-width: 120px;
+    max-height: 120px;
+    width: 100%;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.profile__avatar-btn:hover .profile__avatar {
+    opacity: 0.3;
+
+}
+
+.profile__avatar-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    background-image: url(../../../images/edit-pen.svg);
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+
+.profile__avatar-btn:hover::before {
+    opacity: 1;
+}

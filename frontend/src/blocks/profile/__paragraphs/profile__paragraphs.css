@@ -1,0 +1,8 @@
+@media screen and (max-width: 500px) {
+    .profile__paragraphs {
+        margin: 22px 0 0 65px;
+        max-width: 189px;
+        width: 100%;
+
+    }
+}

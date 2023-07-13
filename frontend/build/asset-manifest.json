@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/react-mesto-auth/static/css/main.ed90be39.css",
+    "main.js": "/react-mesto-auth/static/js/main.7c314cf7.js",
+    "static/js/787.0fc3b920.chunk.js": "/react-mesto-auth/static/js/787.0fc3b920.chunk.js",
+    "static/media/Inter-Medium.woff?v=3.19": "/react-mesto-auth/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff?v=3.19": "/react-mesto-auth/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff?v=3.19": "/react-mesto-auth/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2?v=3.19": "/react-mesto-auth/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2?v=3.19": "/react-mesto-auth/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2?v=3.19": "/react-mesto-auth/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/Vector.svg": "/react-mesto-auth/static/media/Vector.13449c872722baf69efa2ec49870bf98.svg",
+    "static/media/like.svg": "/react-mesto-auth/static/media/like.b3df3d775b2efc93ed76.svg",
+    "index.html": "/react-mesto-auth/index.html",
+    "static/media/denied.svg": "/react-mesto-auth/static/media/denied.d4ce2a261b68c6da973d51ef98afae1a.svg",
+    "static/media/Trash.svg": "/react-mesto-auth/static/media/Trash.ce3b64935accf9b8212e.svg",
+    "static/media/success.svg": "/react-mesto-auth/static/media/success.a9eb6caf1da3ff48b215fb1dd9477d74.svg",
+    "static/media/Union.svg": "/react-mesto-auth/static/media/Union.287e548ff93a727c6cd4.svg",
+    "static/media/Edit Button 2.svg": "/react-mesto-auth/static/media/Edit Button 2.c7f01ac2ebc2aa7094fe.svg",
+    "static/media/Edit Button 1.svg": "/react-mesto-auth/static/media/Edit Button 1.4512588d48fd1706fe06.svg",
+    "static/media/Add Button 2.svg": "/react-mesto-auth/static/media/Add Button 2.6933b1e2bfb56e7f1523.svg",
+    "static/media/Add Button 1.svg": "/react-mesto-auth/static/media/Add Button 1.898fc3e9700ce23f4f03.svg",
+    "static/media/Close Icon.svg": "/react-mesto-auth/static/media/Close Icon.41fe4427edd9f2cae7d6.svg",
+    "static/media/edit-pen.svg": "/react-mesto-auth/static/media/edit-pen.ae1a976ddb506239e9f0.svg",
+    "static/media/Close Icon Min.svg": "/react-mesto-auth/static/media/Close Icon Min.622e8cdafa2222aa7c54.svg",
+    "main.ed90be39.css.map": "/react-mesto-auth/static/css/main.ed90be39.css.map",
+    "main.7c314cf7.js.map": "/react-mesto-auth/static/js/main.7c314cf7.js.map",
+    "787.0fc3b920.chunk.js.map": "/react-mesto-auth/static/js/787.0fc3b920.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed90be39.css",
+    "static/js/main.7c314cf7.js"
+  ]
+}

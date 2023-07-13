@@ -1,0 +1,35 @@
+.profile__profession {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.38;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #FFF;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 258px;
+}
+
+@media screen and (max-width: 1024px) {
+    .profile__profession {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .profile__profession {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profile__profession {
+        margin-top: 14px;
+    }
+}
