@@ -6,6 +6,7 @@ const ValidationError = require('../errors/ValidationError');
 const ConflictError = require('../errors/ConflictError');
 const NotFoundError = require('../errors/NotFoundError');
 const AuthError = require('../errors/AuthError');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const findById = (req, res, next, id) => {

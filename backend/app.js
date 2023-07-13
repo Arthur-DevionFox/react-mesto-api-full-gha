@@ -2,10 +2,10 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
+const cors = require('cors');
 const auth = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('cors')
-require('dotenv').config()
+require('dotenv').config();
 
 const handleError = require('./middlewares/handleError');
 const { userLogin, createUser } = require('./controllers/user');
@@ -17,10 +17,10 @@ const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.use(cors())
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 mongoose.connect(BASE_PATH)
   .then(() => {
@@ -50,6 +50,7 @@ app.use('*', (req, res) => {
   res.status(404).send({ message: 'Такого пути не существует' });
 });
 
+app.use(errorLogger);
 app.use(errors());
 app.use(handleError);
 

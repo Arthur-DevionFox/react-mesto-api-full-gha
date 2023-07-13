@@ -1,7 +1,7 @@
 class Api {
     constructor(path, token) {
         this._path = path;
-        this._token = token
+        this._token = `Bearer ${token}`
     }
 
     _getHeaders() {
@@ -99,8 +99,7 @@ class Api {
 }
 
 const api = new Api(
-    'https://mesto.nomoreparties.co/v1/cohort-61',
-    '9eaec6e2-1762-46e5-a009-778183ac0cdb',
+    'https://mestoarthurbek.nomoredomains.work/',
 );
 
 export default api
