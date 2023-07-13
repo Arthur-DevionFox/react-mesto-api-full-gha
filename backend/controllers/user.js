@@ -90,7 +90,7 @@ module.exports.userLogin = (req, res, next) => {
       if (!isEqual) {
         throw new ValidationError('Неверный email или пароль');
       }
-      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' })
       res.send({ token });
     })
     .catch(() => next(new AuthError('Пользователя с такой почтой не существует')));
