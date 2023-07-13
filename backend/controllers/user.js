@@ -78,19 +78,18 @@ module.exports.createUser = (req, res, next) => {
 module.exports.userLogin = (req, res, next) => {
   const { email, password } = req.body;
 
-  User.findOne({ email }).select('+password')
-    .then((user) => {
-      if (!user) {
-        return Promise.reject(new ValidationError('Неправильные почта или пароль'));
+  User.findOne({ email })
+    .select('+password')
+    .orFail(() => {
+      throw new ValidationError('Неверный email или пароль');
+    })
+    .then((user) => Promise.all([user, bcrypt.compare(password, user.password)]))
+    .then(([user, isEqual]) => {
+      if (!isEqual) {
+        throw new ValidationError('Неверный email или пароль');
       }
-      return bcrypt.compare(password, user.password)
-        .then((matched) => {
-          if (!matched) {
-            return Promise.reject(new ValidationError('Неправильные почта или пароль'));
-          }
-          const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' });
-          return res.status(200).send({ message: 'Все верно', token });
-        });
+      const token = signToken({ _id: user._id });
+      res.send({ token });
     })
     .catch(() => next(new AuthError('Пользователя с такой почтой не существует')));
 };
