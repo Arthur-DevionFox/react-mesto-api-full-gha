@@ -51,7 +51,7 @@ function App() {
         console.log(password, email);
         auth.register(password, email)
             .then((res) => {
-                navigate('/sign-in', {replace: true});
+                navigate('/', {replace: true});
                 setInfoSuccess(true); // статус регистрации
                 return res;
             })
