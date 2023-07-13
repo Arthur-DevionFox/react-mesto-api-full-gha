@@ -51,7 +51,7 @@ function App() {
         console.log(password, email);
         auth.register(password, email)
             .then((res) => {
-                navigate('/sign-in', {replace: true});
+                navigate('/signin', {replace: true});
                 setInfoSuccess(true); // статус регистрации
                 return res;
             })
@@ -111,7 +111,7 @@ function App() {
         setLoggedIn(false);
         setHeaderEmail('');
         localStorage.removeItem('jwt');
-        navigate('/sign-in', {replace: true});
+        navigate('/signin', {replace: true});
 
     }
 
