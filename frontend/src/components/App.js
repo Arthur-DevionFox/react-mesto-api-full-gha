@@ -174,13 +174,13 @@ function App() {
 
         if (!isLiked) {
             api.clickLike(card._id).then((newCard) => {
-                setCards((state) => state.map((c) => (c._id === card._id ? newCard.data : c)));
+                setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
             }).catch((err) => {
                 console.error(err);
             });
         } else {
             api.removeLike(card._id).then((newCard) => {
-                setCards((state) => state.map((c) => (c._id === card._id ? newCard.data : c)));
+                setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
             }).catch((err) => {
                 console.error(err);
             });
