@@ -99,7 +99,7 @@ class Api {
 }
 
 const api = new Api(
-    'https://mestoarthurbek.nomoredomains.work/',
+    'https://mestoarthurbek.nomoredomains.work',
 );
 
 export default api
