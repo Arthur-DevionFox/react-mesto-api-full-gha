@@ -162,7 +162,7 @@ function App() {
 
     function handleUpdateUser(data) {
         api.editProfileInfo(data).then((newUser) => {
-            setCurrentUser(newUser);
+            setCurrentUser(newUser.data);
             closeAllPopups();
         }).catch((err) => {
             console.error(err);
@@ -206,7 +206,7 @@ function App() {
 
     function handleAvatarUpdate(data) {
         api.editProfileAvatar(data).then((newAvatar) => {
-            setCurrentUser(newAvatar);
+            setCurrentUser(newAvatar.data);
             closeAllPopups();
         }).catch((err) => {
             console.error(err);
