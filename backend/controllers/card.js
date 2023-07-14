@@ -50,7 +50,7 @@ module.exports.likeCard = (req, res, next) => {
       if (!card) {
         return next(new NotFoundError('Такой карточки не существует'));
       }
-      return res.status(200).send({ message: 'Лайк поставлен' });
+      return res.status(200).send(card);
     })
     .catch(() => next(new ValidationError('Произошла ошибка')));
 };
@@ -61,7 +61,7 @@ module.exports.dislikeCard = (req, res, next) => {
       if (!card) {
         return next(new NotFoundError('Такой карточки не существует'));
       }
-      return res.status(200).send({ message: 'Лайк удален' });
+      return res.status(200).send(card);
     })
     .catch(() => next(new ValidationError('произошла ошибка')));
 };

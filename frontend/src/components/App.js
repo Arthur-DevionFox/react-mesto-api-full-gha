@@ -40,7 +40,7 @@ function App() {
         if (loggedIn) {
             Promise.all([api.getProfileInfo(), api.getInitialCards()]).then(([profileInfo, card]) => {
                 setCurrentUser(profileInfo);
-                setCards(card);
+                setCards(card.data);
             }).catch((err) => {
                 console.error(err);
             });
@@ -51,7 +51,7 @@ function App() {
         console.log(password, email);
         auth.register(password, email)
             .then((res) => {
-                navigate('/sign-in', {replace: true});
+                navigate('/', {replace: true});
                 setInfoSuccess(true); // статус регистрации
                 return res;
             })
@@ -71,6 +71,7 @@ function App() {
                     localStorage.setItem('jwt', data.token);
                     setLoggedIn(true);
                     setHeaderEmail(email)
+                    api.setToken(data.token)
                 }
             })
             .catch((err) => {
@@ -84,11 +85,9 @@ function App() {
         const jwt = localStorage.getItem('jwt');
         if (jwt) {
             auth.getAuthorization(jwt)
-                .then(data => {
-                    if (data) {
-                        setHeaderEmail(data.data.email)
-                    }
+                .then(() => {
                     setLoggedIn(true);
+                    api.setToken(jwt)
                 })
                 .catch((err) => {
                     console.log(err);
@@ -171,17 +170,17 @@ function App() {
     }
 
     function handleCardLike(card) {
-        const isLiked = card.likes.some((i) => i._id === currentUser._id);
+        const isLiked = card.likes.some((i) => i === currentUser._id);
 
         if (!isLiked) {
             api.clickLike(card._id).then((newCard) => {
-                setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
+                setCards((state) => state.map((c) => (c._id === card._id ? newCard.data : c)));
             }).catch((err) => {
                 console.error(err);
             });
         } else {
             api.removeLike(card._id).then((newCard) => {
-                setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
+                setCards((state) => state.map((c) => (c._id === card._id ? newCard.data : c)));
             }).catch((err) => {
                 console.error(err);
             });
@@ -190,7 +189,7 @@ function App() {
 
     function handleAddPlaceSubmit(data) {
         api.addNewCard(data).then((newCard) => {
-            setCards([newCard, ...cards]);
+            setCards([newCard.data, ...cards]);
             closeAllPopups();
         }).catch((err) => {
             console.error(err);

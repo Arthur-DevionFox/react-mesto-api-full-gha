@@ -1,6 +1,9 @@
 class Api {
-    constructor(path, token) {
+    constructor(path) {
         this._path = path;
+    }
+
+    setToken(token) {
         this._token = `Bearer ${token}`
     }
 
@@ -99,7 +102,7 @@ class Api {
 }
 
 const api = new Api(
-    'https://mestoarthurbek.nomoredomains.work/',
+    'https://mestoarthurbek.nomoredomains.work',
 );
 
 export default api
