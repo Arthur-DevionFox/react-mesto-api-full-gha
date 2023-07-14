@@ -85,7 +85,8 @@ function App() {
         const jwt = localStorage.getItem('jwt');
         if (jwt) {
             auth.getAuthorization(jwt)
-                .then(() => {
+                .then((data) => {
+                    setHeaderEmail(data.email)
                     setLoggedIn(true);
                     api.setToken(jwt)
                 })
