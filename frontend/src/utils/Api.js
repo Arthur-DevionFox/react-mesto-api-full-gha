@@ -1,6 +1,9 @@
 class Api {
-    constructor(path, token) {
+    constructor(path) {
         this._path = path;
+    }
+
+    setToken(token) {
         this._token = `Bearer ${token}`
     }
 
