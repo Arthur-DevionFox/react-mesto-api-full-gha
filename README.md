@@ -5,10 +5,4 @@
 
 Адрес репозитория: https://github.com/Arthur-DevionFox/react-mesto-api-full-gha
 
-## Ссылки на проект
-
-IP 158.160.77.92
-
-Frontend https://mestoarthur.nomoredomains.work
-
-Backend https://mestoarthurbek.nomoredomains.work
+Запуск проекта через npm start
